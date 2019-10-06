@@ -8,6 +8,5 @@ The course has algorithms in Python and R.
 
 ## Usage
 
-
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
