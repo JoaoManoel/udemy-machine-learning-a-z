@@ -20,5 +20,19 @@ regressor = lm(formula = Profit ~ .,
 # Predicting the Test set results
 y_pred = predict(regressor, newdata = test_set)
 
+# Building the optimal model using Backward Elimination
+regressor = lm(formula = Profit ~ R.D.Spend + Administration + Marketing.Spend + State, 
+                data = dataset)
+
+regressor = lm(formula = Profit ~ R.D.Spend + Administration + Marketing.Spend, 
+               data = dataset)
+
+regressor = lm(formula = Profit ~ R.D.Spend + Marketing.Spend, 
+               data = dataset)
+
+regressor = lm(formula = Profit ~ R.D.Spend, 
+               data = dataset)
+
+summary(regressor)
 # Checked the summary(regressor) and R.D.Spend  is the most important dependent variable
 # regressor = lm(formula = Profile ~ R.D.Spend, data = training_set)
